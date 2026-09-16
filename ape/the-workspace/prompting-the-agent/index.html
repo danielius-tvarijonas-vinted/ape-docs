@@ -1,0 +1,135 @@
+<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ape/the-workspace/prompting-the-agent" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Prompting the agent | Bloom</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://danielius-tvarijonas-vinted.github.io/ape-docs/ape/the-workspace/prompting-the-agent/ /><meta data-rh=true property=og:locale content=en /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="Prompting the agent | Bloom"/><meta data-rh=true name=description content="What to say, how big asks get planned, and the three things Enter can do."/><meta data-rh=true property=og:description content="What to say, how big asks get planned, and the three things Enter can do."/><link data-rh=true rel=icon href=/ape-docs/img/favicon.png /><link data-rh=true rel=canonical href=https://danielius-tvarijonas-vinted.github.io/ape-docs/ape/the-workspace/prompting-the-agent/ /><link data-rh=true rel=alternate href=https://danielius-tvarijonas-vinted.github.io/ape-docs/ape/the-workspace/prompting-the-agent/ hreflang=en /><link data-rh=true rel=alternate href=https://danielius-tvarijonas-vinted.github.io/ape-docs/ape/the-workspace/prompting-the-agent/ hreflang=x-default /><script>!function(){try{var t=localStorage.getItem("bloom-bu");document.documentElement.setAttribute("data-bu",-1!==["mp","vgo","int","vpay"].indexOf(t)?t:"mp")}catch(t){document.documentElement.setAttribute("data-bu","mp")}}()</script><link rel=stylesheet href=/ape-docs/assets/css/styles.e53d8d0f.css /><script src=/ape-docs/assets/js/runtime~main.ce7ea912.js defer></script><script src=/ape-docs/assets/js/main.3770d87c.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t;document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/ape-docs/img/vinted-logo.png /><div role=region aria-label="Skip to main content"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/ape-docs/><div class=navbar__logo><img src=/ape-docs/img/vinted-logo.png alt="Vinted Design" class="themedComponent_mlkZ themedComponent--light_NVdE" height=36 width=148 /><img src=/ape-docs/img/vinted-logo.png alt="Vinted Design" class="themedComponent_mlkZ themedComponent--dark_xIcU" height=36 width=148 /></div></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class=navbarSearchContainer_Bca1><div class=dsla-search-wrapper><div class=dsla-search-field></div><div style=display:none><a tabindex=-1 aria-hidden=true href=/ape-docs/ape/getting-started/introduction/>Introduction</a><a tabindex=-1 aria-hidden=true href=/ape-docs/ape/getting-started/quick-start/>Quick start</a><a tabindex=-1 aria-hidden=true href=/ape-docs/ape/reference/getting-help/>Getting help</a></div></div></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# class=navbar__link role=button aria-haspopup=listbox aria-expanded=false aria-label="Business unit">Marketplace</a><ul class=dropdown__menu role=listbox><li role=none><button type=button role=option aria-selected=true class="dropdown__link bu-switcher__option dropdown__link--active"><span>Marketplace</span></button><li role=none><button type=button role=option aria-selected=false class="dropdown__link bu-switcher__option"><span>Vinted Go</span></button><li role=none><button type=button role=option aria-selected=false class="dropdown__link bu-switcher__option"><span>Internal Tools</span></button><li role=none><button type=button role=option aria-selected=false class="dropdown__link bu-switcher__option"><span>Vinted Pay</span></button></ul></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><div class=bloom-sidebar-split><nav class=bloom-sidebar-primary-menu aria-label="Site sections"><span class=bloom-sidebar-primary-menu__disabled role=link aria-disabled=true><span class=bloom-sidebar-primary-menu__icon data-icon=home aria-hidden=true></span><span class=bloom-sidebar-primary-menu__label>Home</span></span><span class=bloom-sidebar-primary-menu__disabled role=link aria-disabled=true><span class=bloom-sidebar-primary-menu__icon data-icon=get-started aria-hidden=true></span><span class=bloom-sidebar-primary-menu__label>Get Started</span></span><span class=bloom-sidebar-primary-menu__disabled role=link aria-disabled=true><span class=bloom-sidebar-primary-menu__icon data-icon=foundations aria-hidden=true></span><span class=bloom-sidebar-primary-menu__label>Foundations</span></span><span class=bloom-sidebar-primary-menu__disabled role=link aria-disabled=true><span class=bloom-sidebar-primary-menu__icon data-icon=components aria-hidden=true></span><span class=bloom-sidebar-primary-menu__label>Components</span></span><span class=bloom-sidebar-primary-menu__disabled role=link aria-disabled=true><span class=bloom-sidebar-primary-menu__icon data-icon=patterns aria-hidden=true></span><span class=bloom-sidebar-primary-menu__label>Patterns</span></span><span class=bloom-sidebar-primary-menu__disabled role=link aria-disabled=true><span class=bloom-sidebar-primary-menu__icon data-icon=contribute aria-hidden=true></span><span class=bloom-sidebar-primary-menu__label>Contribute</span></span><a aria-current=true href=/ape-docs/ape/overview/><span class=bloom-sidebar-primary-menu__icon data-icon=ape aria-hidden=true></span><span class=bloom-sidebar-primary-menu__label>APE</span></a></nav><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/ape-docs/ape/overview/><span class=linkLabel_WmDU>APE documentation</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ape-docs/ape/getting-started/introduction/><span class=categoryLinkLabel_W154>Getting started</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ape-docs/ape/concepts/sessions/><span class=categoryLinkLabel_W154>Concepts</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/ape-docs/ape/the-workspace/the-session-screen/><span class=categoryLinkLabel_W154>The workspace</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/ape-docs/ape/the-workspace/the-session-screen/><span class=linkLabel_WmDU>The session screen</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/ape-docs/ape/the-workspace/prompting-the-agent/><span class=linkLabel_WmDU>Prompting the agent</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/ape-docs/ape/the-workspace/the-live-preview/><span class=linkLabel_WmDU>The live preview</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/ape-docs/ape/the-workspace/pointing-at-things/><span class=linkLabel_WmDU>Pointing at things</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/ape-docs/ape/the-workspace/files-and-history/><span class=linkLabel_WmDU>Files and history</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ape-docs/ape/working-with-others/sharing/><span class=categoryLinkLabel_W154>Working with others</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ape-docs/ape/shipping/pull-requests/><span class=categoryLinkLabel_W154>Shipping</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ape-docs/ape/reference/reference/><span class=categoryLinkLabel_W154>Reference</span></a></div></ul></nav></div></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=bu-page><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Prompting the agent</h1></header>
+<p>The agent is Claude Code, running inside your session's container. It can read and write
+files, search the codebase, run commands, and check its own work against the running app.</p>
+<p>What you get out of it depends mostly on how you ask.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=writing-a-good-prompt>Writing a good prompt<a href=#writing-a-good-prompt class=hash-link aria-label="Direct link to Writing a good prompt" title="Direct link to Writing a good prompt" translate=no>​</a></h2>
+<p><strong>Name the thing and the place.</strong></p>
+<blockquote>
+<p>Add a "Save for later" button to the item page, next to the Buy button.</p>
+</blockquote>
+<p>Not:</p>
+<blockquote>
+<p>add a save button</p>
+</blockquote>
+<p><strong>Say what shouldn't change.</strong> The agent errs toward minimal changes, but being explicit
+removes any doubt.</p>
+<blockquote>
+<p>Change only the spacing. Don't touch the copy or the colours.</p>
+</blockquote>
+<p><strong>One outcome per prompt.</strong> Three unrelated changes in one message means three chances for
+one of them to be misread, and a single commit you can't partially undo. Send them
+separately.</p>
+<p><strong>Point instead of describing</strong> where you can. Clicking an element with Inspect is worth
+more than a paragraph of description – see <a class="" href=/ape-docs/ape/the-workspace/pointing-at-things/>Pointing at things</a>.</p>
+<p><strong>Say what's wrong, not how to fix it,</strong> unless you know the codebase. "The cards are
+uneven heights on mobile" gets a better result than a guess at the CSS.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=ask-for-a-plan-on-big-requests>Ask for a plan on big requests<a href=#ask-for-a-plan-on-big-requests class=hash-link aria-label="Direct link to Ask for a plan on big requests" title="Direct link to Ask for a plan on big requests" translate=no>​</a></h2>
+<p>The agent is instructed to plan before building when a request is large – three or more
+screens, a multi-step flow, a feature with both UI and state, an open-ended redesign.</p>
+<p><strong>In practice it often doesn't.</strong> If your request is clear enough to act on, it will
+usually just build the whole thing in one long run, which can take several minutes and
+lands as a single commit.</p>
+<p>So if you want a plan, ask for one:</p>
+<blockquote>
+<p>Before you build anything, give me a numbered plan and wait for me to confirm it.</p>
+</blockquote>
+<p>Add that to a large request and you'll get a list of slices – normally three to six, each
+one a coherent piece of work – and a question about how far to go before it starts.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=why-bother>Why bother<a href=#why-bother class=hash-link aria-label="Direct link to Why bother" title="Direct link to Why bother" translate=no>​</a></h3>
+<ul>
+<li class=""><strong>A checkpoint between pieces.</strong> A wrong direction costs one slice, not the whole
+feature.</li>
+<li class=""><strong>One commit per slice</strong>, so you can revert part of the work instead of all of it.</li>
+<li class=""><strong>Shorter runs.</strong> A single run doing everything is more likely to fail partway through,
+and you wait longer to see anything.</li>
+</ul>
+<p>The trade is speed. If you're confident in the request and happy to revert the lot if
+it's wrong, letting it build in one go is faster.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=small-requests>Small requests<a href=#small-requests class=hash-link aria-label="Direct link to Small requests" title="Direct link to Small requests" translate=no>​</a></h3>
+<p>A copy change, one component, moving a row – it just does it, and that's right. Asking
+for a plan on something that size is overhead.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=tell-it-to-ask-you-questions>Tell it to ask you questions<a href=#tell-it-to-ask-you-questions class=hash-link aria-label="Direct link to Tell it to ask you questions" title="Direct link to Tell it to ask you questions" translate=no>​</a></h2>
+<p>The agent can stop and ask you things, and it's genuinely useful – but it almost never
+does it on its own. Given a vague request it decides everything itself and starts
+building.</p>
+<p>The fix is one sentence at the end of your prompt:</p>
+<blockquote>
+<p>build me a coffee shop site. Ask me anything you're unsure about before you start.</p>
+</blockquote>
+<p>That reliably gets you questions instead of a finished guess. They appear as a card in
+the chat, the run pauses until you answer, and the card survives a page refresh if you
+need to go and think about it.</p>
+<p>Worth making a habit at the start of anything open-ended. The questions are usually the
+ones you'd want to be asked – which screens matter, what style, where the data comes
+from – and answering three of them costs less than reverting a build that went the wrong
+way.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=or-just-be-specific>Or just be specific<a href=#or-just-be-specific class=hash-link aria-label="Direct link to Or just be specific" title="Direct link to Or just be specific" translate=no>​</a></h3>
+<p>If you already know what you want, say it and skip the back-and-forth:</p>
+<blockquote>
+<p>Build a landing page for a coffee shop – hero with a photo, opening hours, and a
+contact form. Warm and minimal, not corporate. Use placeholder content.</p>
+</blockquote>
+<p>rather than:</p>
+<blockquote>
+<p>build me a coffee shop site</p>
+</blockquote>
+<p>Either way, the thing to avoid is the vague prompt with no invitation to ask. That's the
+one where every gap becomes a choice made for you.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=runs-have-a-step-budget>Runs have a step budget<a href=#runs-have-a-step-budget class=hash-link aria-label="Direct link to Runs have a step budget" title="Direct link to Runs have a step budget" translate=no>​</a></h2>
+<p>A run gets roughly 80 steps. Reading a file, writing one, running a command – each counts.</p>
+<p>A run that hits the limit stops cleanly and shows a <strong>Continue</strong> pill. That's not an error
+and nothing is lost; the work so far is committed. Click Continue, or type your own
+instruction to redirect.</p>
+<p>If you hit it often, your prompts are probably too big. Let the planning behaviour do its
+job rather than asking for everything at once.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=sending-while-its-working>Sending while it's working<a href=#sending-while-its-working class=hash-link aria-label="Direct link to Sending while it's working" title="Direct link to Sending while it's working" translate=no>​</a></h2>
+<p>You don't have to wait. Anything you send while a run is going joins a <strong>queue</strong> and runs
+in order when the current one finishes.</p>
+<p>The queue shows above the composer. You can remove individual items, or pause it if you
+want to see how the current change lands before the next one starts.</p>
+<p><strong>Stop</strong> aborts the current run. Work already committed stays.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=attaching-images>Attaching images<a href=#attaching-images class=hash-link aria-label="Direct link to Attaching images" title="Direct link to Attaching images" translate=no>​</a></h2>
+<p>Paste or drag up to four images per message. Screenshots, Figma exports, a photo of a
+whiteboard. The <strong>+</strong> next to the message box does the same thing if you'd rather pick a
+file.</p>
+<p>That menu also has <strong>Take screenshot</strong>, which lets you drag a box over the preview and
+attach the crop – see <a class="" href=/ape-docs/ape/the-workspace/pointing-at-things/>Pointing at things</a>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=talking-to-people-instead>Talking to people instead<a href=#talking-to-people-instead class=hash-link aria-label="Direct link to Talking to people instead" title="Direct link to Talking to people instead" translate=no>​</a></h2>
+<p>Start a message with <code>@</code> and someone's name and it becomes a <strong>note</strong> – it goes to that
+person, not the agent, and doesn't start a run. See
+<a class="" href=/ape-docs/ape/working-with-others/comments-and-notes/>Comments and notes</a>.</p>
+<p>So Enter does one of three things depending on context: send a prompt, answer a pending
+question, or post a note. The composer changes colour to tell you which.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=cost>Cost<a href=#cost class=hash-link aria-label="Direct link to Cost" title="Direct link to Cost" translate=no>​</a></h2>
+<p>Hover any of the agent's messages to see the tokens it used and a rough cost.</p>
+<p>The numbers include <em>cache</em> tokens, which is why a first message in a session can look
+expensive relative to the ones after it – the agent is reading the codebase into its
+working memory once and reusing it. Long sessions get cheaper per prompt, not more
+expensive.</p>
+<p>The figures are estimates against public list pricing. See
+<a class="" href=/ape-docs/ape/reference/reference/>Reference</a>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=when-it-gets-stuck>When it gets stuck<a href=#when-it-gets-stuck class=hash-link aria-label="Direct link to When it gets stuck" title="Direct link to When it gets stuck" translate=no>​</a></h2>
+<ul>
+<li class=""><strong>It changed the wrong thing.</strong> Revert to the previous prompt rather than asking it to
+undo. See <a class="" href=/ape-docs/ape/the-workspace/files-and-history/>Files and history</a>.</li>
+<li class=""><strong>It says it's done but the preview is broken.</strong> Tell it. It has a screenshot tool that
+sees browser console errors, which is how it finds problems that don't appear in the
+terminal.</li>
+<li class=""><strong>It's going in circles.</strong> Stop the run, revert to the last good state, and re-prompt
+with more constraint. Continuing to add instructions on top of a confused state rarely
+recovers.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=where-to-go-next>Where to go next<a href=#where-to-go-next class=hash-link aria-label="Direct link to Where to go next" title="Direct link to Where to go next" translate=no>​</a></h2>
+<ul>
+<li class=""><strong><a class="" href=/ape-docs/ape/the-workspace/pointing-at-things/>Pointing at things</a></strong> – clicking an element beats
+describing it, and it's the single biggest improvement to your prompts.</li>
+<li class=""><strong><a class="" href=/ape-docs/ape/the-workspace/files-and-history/>Files and history</a></strong> – checking what the agent changed, and
+going back when it's wrong.</li>
+<li class=""><strong><a class="" href=/ape-docs/ape/working-with-others/comments-and-notes/>Comments and notes</a></strong> – talking
+to people in the same chat, without starting a run.</li>
+</ul>
+<hr/>
+<p><strong>Questions, problems, or ideas?</strong> Ask in <a href=https://vinted.slack.com/archives/C0B4X98C2R1 target=_blank rel="noopener noreferrer" class="">#bloom-ape</a> on Slack.</div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href=https://github.com/vinted/bloom-brain/edit/master/docs/../docs/ape/03-the-workspace/02-prompting-the-agent.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href=/ape-docs/ape/the-workspace/the-session-screen/><div class=pagination-nav__sublabel>Previous</div><div class=pagination-nav__label>The session screen</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/ape-docs/ape/the-workspace/the-live-preview/><div class=pagination-nav__sublabel>Next</div><div class=pagination-nav__label>The live preview</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#writing-a-good-prompt class="table-of-contents__link toc-highlight">Writing a good prompt</a><li><a href=#ask-for-a-plan-on-big-requests class="table-of-contents__link toc-highlight">Ask for a plan on big requests</a><ul><li><a href=#why-bother class="table-of-contents__link toc-highlight">Why bother</a><li><a href=#small-requests class="table-of-contents__link toc-highlight">Small requests</a></ul><li><a href=#tell-it-to-ask-you-questions class="table-of-contents__link toc-highlight">Tell it to ask you questions</a><ul><li><a href=#or-just-be-specific class="table-of-contents__link toc-highlight">Or just be specific</a></ul><li><a href=#runs-have-a-step-budget class="table-of-contents__link toc-highlight">Runs have a step budget</a><li><a href=#sending-while-its-working class="table-of-contents__link toc-highlight">Sending while it's working</a><li><a href=#attaching-images class="table-of-contents__link toc-highlight">Attaching images</a><li><a href=#talking-to-people-instead class="table-of-contents__link toc-highlight">Talking to people instead</a><li><a href=#cost class="table-of-contents__link toc-highlight">Cost</a><li><a href=#when-it-gets-stuck class="table-of-contents__link toc-highlight">When it gets stuck</a><li><a href=#where-to-go-next class="table-of-contents__link toc-highlight">Where to go next</a></ul></div></div></div></div></div></main></div></div></div></div></body>

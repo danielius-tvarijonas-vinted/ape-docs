@@ -1,0 +1,152 @@
+<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ape/reference/cli-and-ssh-onboarding" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>CLI and SSH onboarding | Bloom</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://danielius-tvarijonas-vinted.github.io/ape-docs/ape/reference/cli-and-ssh-onboarding/ /><meta data-rh=true property=og:locale content=en /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="CLI and SSH onboarding | Bloom"/><meta data-rh=true name=description content="For engineers who want to work on a session in Cursor over SSH."/><meta data-rh=true property=og:description content="For engineers who want to work on a session in Cursor over SSH."/><link data-rh=true rel=icon href=/ape-docs/img/favicon.png /><link data-rh=true rel=canonical href=https://danielius-tvarijonas-vinted.github.io/ape-docs/ape/reference/cli-and-ssh-onboarding/ /><link data-rh=true rel=alternate href=https://danielius-tvarijonas-vinted.github.io/ape-docs/ape/reference/cli-and-ssh-onboarding/ hreflang=en /><link data-rh=true rel=alternate href=https://danielius-tvarijonas-vinted.github.io/ape-docs/ape/reference/cli-and-ssh-onboarding/ hreflang=x-default /><script>!function(){try{var t=localStorage.getItem("bloom-bu");document.documentElement.setAttribute("data-bu",-1!==["mp","vgo","int","vpay"].indexOf(t)?t:"mp")}catch(t){document.documentElement.setAttribute("data-bu","mp")}}()</script><link rel=stylesheet href=/ape-docs/assets/css/styles.e53d8d0f.css /><script src=/ape-docs/assets/js/runtime~main.ce7ea912.js defer></script><script src=/ape-docs/assets/js/main.3770d87c.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t;document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/ape-docs/img/vinted-logo.png /><div role=region aria-label="Skip to main content"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/ape-docs/><div class=navbar__logo><img src=/ape-docs/img/vinted-logo.png alt="Vinted Design" class="themedComponent_mlkZ themedComponent--light_NVdE" height=36 width=148 /><img src=/ape-docs/img/vinted-logo.png alt="Vinted Design" class="themedComponent_mlkZ themedComponent--dark_xIcU" height=36 width=148 /></div></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class=navbarSearchContainer_Bca1><div class=dsla-search-wrapper><div class=dsla-search-field></div><div style=display:none><a tabindex=-1 aria-hidden=true href=/ape-docs/ape/getting-started/introduction/>Introduction</a><a tabindex=-1 aria-hidden=true href=/ape-docs/ape/getting-started/quick-start/>Quick start</a><a tabindex=-1 aria-hidden=true href=/ape-docs/ape/reference/getting-help/>Getting help</a></div></div></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# class=navbar__link role=button aria-haspopup=listbox aria-expanded=false aria-label="Business unit">Marketplace</a><ul class=dropdown__menu role=listbox><li role=none><button type=button role=option aria-selected=true class="dropdown__link bu-switcher__option dropdown__link--active"><span>Marketplace</span></button><li role=none><button type=button role=option aria-selected=false class="dropdown__link bu-switcher__option"><span>Vinted Go</span></button><li role=none><button type=button role=option aria-selected=false class="dropdown__link bu-switcher__option"><span>Internal Tools</span></button><li role=none><button type=button role=option aria-selected=false class="dropdown__link bu-switcher__option"><span>Vinted Pay</span></button></ul></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><div class=bloom-sidebar-split><nav class=bloom-sidebar-primary-menu aria-label="Site sections"><span class=bloom-sidebar-primary-menu__disabled role=link aria-disabled=true><span class=bloom-sidebar-primary-menu__icon data-icon=home aria-hidden=true></span><span class=bloom-sidebar-primary-menu__label>Home</span></span><span class=bloom-sidebar-primary-menu__disabled role=link aria-disabled=true><span class=bloom-sidebar-primary-menu__icon data-icon=get-started aria-hidden=true></span><span class=bloom-sidebar-primary-menu__label>Get Started</span></span><span class=bloom-sidebar-primary-menu__disabled role=link aria-disabled=true><span class=bloom-sidebar-primary-menu__icon data-icon=foundations aria-hidden=true></span><span class=bloom-sidebar-primary-menu__label>Foundations</span></span><span class=bloom-sidebar-primary-menu__disabled role=link aria-disabled=true><span class=bloom-sidebar-primary-menu__icon data-icon=components aria-hidden=true></span><span class=bloom-sidebar-primary-menu__label>Components</span></span><span class=bloom-sidebar-primary-menu__disabled role=link aria-disabled=true><span class=bloom-sidebar-primary-menu__icon data-icon=patterns aria-hidden=true></span><span class=bloom-sidebar-primary-menu__label>Patterns</span></span><span class=bloom-sidebar-primary-menu__disabled role=link aria-disabled=true><span class=bloom-sidebar-primary-menu__icon data-icon=contribute aria-hidden=true></span><span class=bloom-sidebar-primary-menu__label>Contribute</span></span><a aria-current=true href=/ape-docs/ape/overview/><span class=bloom-sidebar-primary-menu__icon data-icon=ape aria-hidden=true></span><span class=bloom-sidebar-primary-menu__label>APE</span></a></nav><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/ape-docs/ape/overview/><span class=linkLabel_WmDU>APE documentation</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ape-docs/ape/getting-started/introduction/><span class=categoryLinkLabel_W154>Getting started</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ape-docs/ape/concepts/sessions/><span class=categoryLinkLabel_W154>Concepts</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ape-docs/ape/the-workspace/the-session-screen/><span class=categoryLinkLabel_W154>The workspace</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ape-docs/ape/working-with-others/sharing/><span class=categoryLinkLabel_W154>Working with others</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/ape-docs/ape/shipping/pull-requests/><span class=categoryLinkLabel_W154>Shipping</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/ape-docs/ape/reference/reference/><span class=categoryLinkLabel_W154>Reference</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/ape-docs/ape/reference/reference/><span class=linkLabel_WmDU>Reference</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/ape-docs/ape/reference/troubleshooting/><span class=linkLabel_WmDU>Troubleshooting</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/ape-docs/ape/reference/cli-and-ssh-onboarding/><span class=linkLabel_WmDU>CLI and SSH onboarding</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/ape-docs/ape/reference/getting-help/><span class=linkLabel_WmDU>Getting help</span></a></ul></ul></nav></div></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=bu-page><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>CLI SSH onboarding</h1></header>
+<p>For <strong>developers who want to use <code>aiw</code> to SSH into a Bloom AI workspace session</strong>.</p>
+<blockquote>
+<p>New to APE? Start with <a class="" href=/ape-docs/ape/getting-started/getting-access/>Getting access</a> – everyone needs
+<code>aiw enroll --sso</code> once, and this page picks up from there.</p>
+</blockquote>
+<p>Run through this once and <code>ssh bloom-ai-workspace-&lt;id></code> will work from any terminal, Cursor's Remote-SSH will open the workspace at the project root, and Simple Browser will preview the running app.</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=how-the-ssh-chain-works>How the SSH chain works<a href=#how-the-ssh-chain-works class=hash-link aria-label="Direct link to How the SSH chain works" title="Direct link to How the SSH chain works" translate=no>​</a></h2>
+<p>The orchestrator runs on an EC2 instance. Each workspace runs as a Docker container on that EC2, with its SSH port mapped to a per-session port on the host's loopback (<code>127.0.0.1:4001</code>, <code>:4003</code>, …). Container SSH ports are <strong>not exposed to the network</strong> – only the EC2's own <code>:22</code> is.</p>
+<p>When you connect, your SSH client:</p>
+<ol>
+<li class="">Reaches the EC2 (<code>ubuntu@&lt;ec2></code>) on port <code>22</code> – the <em>jump host</em>.</li>
+<li class="">From there, opens a TCP tunnel to <code>127.0.0.1:&lt;container-port></code> inside the EC2.</li>
+<li class="">Authenticates inside the container as the <code>worker</code> user with a per-session key.</li>
+</ol>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">your laptop ── ssh ──▶ ubuntu@&lt;ec2>:22  ── tunnel ──▶ 127.0.0.1:&lt;port>  ──▶ worker@&lt;container></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">       (your SSH key)                            (per-session ed25519 key)</span><br/></div></code></pre></div></div>
+<p>Two keys, two hops. The CLI sets up both for you – you just need <em>your</em> SSH key on the EC2's allow-list.</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=what-you-need-one-time>What you need (one-time)<a href=#what-you-need-one-time class=hash-link aria-label="Direct link to What you need (one-time)" title="Direct link to What you need (one-time)" translate=no>​</a></h2>
+<ol>
+<li class=""><strong>Vinted VPN – specifically <code>backup-vinted-vpn</code>.</strong> Vinted has two; only this one
+reaches APE. The EC2's security group allows <code>:22</code> from Vinted-internal CIDRs.</li>
+<li class=""><strong>An SSH key on your machine</strong> whose public half has been added to the EC2's <code>authorized_keys</code> by the admin.</li>
+<li class=""><strong>Node.js + npm</strong> to install the CLI.</li>
+</ol>
+<p>That's it. No manual <code>~/.ssh/config</code> edits – the CLI handles them.</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=step-1--install-the-cli>Step 1 – Install the CLI<a href=#step-1--install-the-cli class=hash-link aria-label="Direct link to Step 1 – Install the CLI" title="Direct link to Step 1 – Install the CLI" translate=no>​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">sudo npm install -g @bloom-ai-workspace/cli@latest</span><br/></div></code></pre></div></div>
+<p>Verify:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">aiw --version</span><br/></div></code></pre></div></div>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=step-2--run-aiw-enroll---sso>Step 2 – Run <code>aiw enroll --sso</code><a href=#step-2--run-aiw-enroll---sso class=hash-link aria-label="Direct link to step-2--run-aiw-enroll---sso" title="Direct link to step-2--run-aiw-enroll---sso" translate=no>​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">aiw enroll --sso</span><br/></div></code></pre></div></div>
+<p>This will:</p>
+<ol>
+<li class="">Check for an existing key at <code>~/.ssh/id_ed25519</code>.</li>
+<li class="">If missing, run <code>ssh-keygen -t ed25519</code> interactively so you can set an optional passphrase.</li>
+<li class="">Print your <strong>public</strong> key and copy it to your clipboard.</li>
+</ol>
+<p>Paste that line into Slack DM to the admin who maintains the jump host.</p>
+<blockquote>
+<p><code>id_ed25519</code> is your <strong>private</strong> key – never share it. <code>id_ed25519.pub</code> is your <strong>public</strong> key – safe to paste anywhere.</p>
+</blockquote>
+<p>On macOS, if you set a passphrase, save it to your keychain so you only type it once:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">ssh-add --apple-use-keychain ~/.ssh/id_ed25519</span><br/></div></code></pre></div></div>
+<p>They'll append it to <code>/home/ubuntu/.ssh/authorized_keys</code> on the box. Verify (with VPN on):</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">ssh ubuntu@&lt;jump-host> hostname</span><br/></div></code></pre></div></div>
+<p>If it prints the EC2's hostname and exits cleanly, you're in.</p>
+<p>If you see <em>Permission denied (publickey)</em>, the admin hasn't added your key yet (or you're not on VPN).</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=step-3--use-it>Step 3 – Use it<a href=#step-3--use-it class=hash-link aria-label="Direct link to Step 3 – Use it" title="Direct link to Step 3 – Use it" translate=no>​</a></h2>
+<p><strong>Create a new session interactively:</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">aiw create</span><br/></div></code></pre></div></div>
+<p><strong>Or connect to an existing session (full UUID or 8-char prefix):</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">aiw connect 9db46916 --open</span><br/></div></code></pre></div></div>
+<p>What <code>connect</code> does for you on first run:</p>
+<ol>
+<li class="">Generates a per-machine ed25519 keypair under <code>~/.aiw/</code>.</li>
+<li class="">Pushes the <strong>public</strong> key into the workspace container via the orchestrator API.</li>
+<li class="">Writes a <code>Host bloom-ai-workspace-&lt;id></code> block to <code>~/.ssh/config</code> with <code>ProxyJump &lt;jump-host></code> and the per-session port.</li>
+<li class="">Writes a <code>Host &lt;jump-host></code> block to <code>~/.ssh/config</code> so SSH knows which user to use for the jump (no IdentityFile – your default <code>~/.ssh/id_ed25519</code> is used).</li>
+<li class="">With <code>--open</code>: launches Cursor on the remote folder <strong>and</strong> Cursor's Simple Browser on the session app URL.</li>
+</ol>
+<p>After that, all of these work from any shell:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">ssh bloom-ai-workspace-9db46916          # drop into /workspace as worker</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">cursor --remote ssh-remote+bloom-ai-workspace-9db46916 /workspace</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">aiw connect 9db46916 --open              # re-launch Cursor + Simple Browser</span><br/></div></code></pre></div></div>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=useful-cli-commands>Useful CLI commands<a href=#useful-cli-commands class=hash-link aria-label="Direct link to Useful CLI commands" title="Direct link to Useful CLI commands" translate=no>​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Command<th>Description<tbody><tr><td><code>aiw list</code><td>Show your sessions<tr><td><code>aiw connect &lt;id></code><td>Re-issue SSH config for a session (after a container restart, etc.)<tr><td><code>aiw connect &lt;id> --open</code><td>Connect + open Cursor folder + Simple Browser on the app URL<tr><td><code>aiw connect &lt;id> --web</code><td>Connect + open the app URL in Chrome instead of Simple Browser<tr><td><code>aiw connect &lt;id> --preview</code><td>Also open the raw preview URL in Chrome<tr><td><code>aiw connect &lt;id> --cursor-prompt-text "..."</code><td>Send a prefilled prompt into Cursor's chat panel</table>
+<p><code>aiw help &lt;command></code> for full flag list per command.</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=troubleshooting>Troubleshooting<a href=#troubleshooting class=hash-link aria-label="Direct link to Troubleshooting" title="Direct link to Troubleshooting" translate=no>​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Symptom<th>Likely cause<th>Fix<tbody><tr><td><code>Cannot reach API at http://localhost:3001</code><td>Old CLI version pinned to localhost<td><code>sudo npm install -g @bloom-ai-workspace/cli@latest</code><tr><td><code>ssh ubuntu@&lt;jump></code> → <em>Permission denied (publickey)</em><td>Public key not added to the EC2 yet, or VPN off<td>Verify VPN; ask admin to confirm; check <code>chmod 600 ~/.ssh/id_ed25519</code><tr><td><code>ssh bloom-ai-workspace-&lt;id></code> hangs at the jump<td>EC2 <code>:22</code> unreachable from your network<td><code>nc -z &lt;jump-host> 22</code> – if that fails, VPN issue<tr><td><code>aiw connect</code> SSH probe shows <code>✗</code> but commands then run fine<td>Container was still booting<td>Retry – <code>aiw connect</code> is idempotent<tr><td>Cursor opens to the agents/chat panel instead of the editor<td>Cursor restores the last-active panel (not the CLI's doing)<td>In Cursor, close the chat panel, re-open the folder<tr><td>Old session block lingering in <code>~/.ssh/config</code> after the session is deleted<td>Cleanup misses some entries<td>Open <code>~/.ssh/config</code> and delete the <code># BEGIN bloom-ai-workspace-&lt;id></code> … <code># END</code> block manually</table>
+<hr/>
+<p><strong>Questions, problems, or ideas?</strong> Ask in <a href=https://vinted.slack.com/archives/C0B4X98C2R1 target=_blank rel="noopener noreferrer" class="">#bloom-ape</a> on Slack.</div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href=https://github.com/vinted/bloom-brain/edit/master/docs/../docs/ape/06-reference/03-cli-and-ssh-onboarding.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href=/ape-docs/ape/reference/troubleshooting/><div class=pagination-nav__sublabel>Previous</div><div class=pagination-nav__label>Troubleshooting</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/ape-docs/ape/reference/getting-help/><div class=pagination-nav__sublabel>Next</div><div class=pagination-nav__label>Getting help</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#how-the-ssh-chain-works class="table-of-contents__link toc-highlight">How the SSH chain works</a><li><a href=#what-you-need-one-time class="table-of-contents__link toc-highlight">What you need (one-time)</a><li><a href=#step-1--install-the-cli class="table-of-contents__link toc-highlight">Step 1 – Install the CLI</a><li><a href=#step-2--run-aiw-enroll---sso class="table-of-contents__link toc-highlight">Step 2 – Run <code>aiw enroll --sso</code></a><li><a href=#step-3--use-it class="table-of-contents__link toc-highlight">Step 3 – Use it</a><li><a href=#useful-cli-commands class="table-of-contents__link toc-highlight">Useful CLI commands</a><li><a href=#troubleshooting class="table-of-contents__link toc-highlight">Troubleshooting</a></ul></div></div></div></div></div></main></div></div></div></div></body>

@@ -1,0 +1,39 @@
+# Bloom
+
+> Vinted design system documentation
+
+
+## ape-docs
+
+APE documentation — Vinted’s agentic prototyping environment
+
+- [APE documentation](/index.md): APE documentation — Vinted’s agentic prototyping environment
+
+### search
+
+- [Search the documentation](/search.md)
+
+### ape
+
+- [How your work is saved](/ape/concepts/how-your-work-is-saved.md): Every prompt is a commit. Nothing reaches master without a pull request.
+- [Sessions](/ape/concepts/sessions.md): A container, a branch, and an agent – and what happens when you walk away.
+- [Templates and projects](/ape/concepts/templates-and-projects.md): Sandbox scaffolds, real Vinted repos, and the ones you make yourself.
+- [Getting access](/ape/getting-started/getting-access.md): Two clicks and one command. About a minute, once.
+- [Introduction](/ape/getting-started/introduction.md): What APE is, who it's for, and where it's going.
+- [Migration from Lovable](/ape/getting-started/migration-from-lovable.md): Moving existing work from Lovable into APE.
+- [Quick start in Cursor](/ape/getting-started/quick-start-in-cursor.md): The same session, opened in your own editor, with your own tools.
+- [Quick start](/ape/getting-started/quick-start.md): From nothing to a working prototype in five minutes.
+- [APE documentation](/ape/overview.md): How to get access, what every part of the workspace does, and how to ship what you build.
+- [CLI SSH onboarding](/ape/reference/cli-and-ssh-onboarding.md): For engineers who want to work on a session in Cursor over SSH.
+- [Getting help](/ape/reference/getting-help.md): Where to ask, what to send, and which channel suits what.
+- [Reference](/ape/reference/reference.md): Statuses, limits, costs, and every aiw command.
+- [Troubleshooting](/ape/reference/troubleshooting.md): What to do when it doesn't work.
+- [Publishing](/ape/shipping/publishing.md): A public URL for a prototype, and keeping it current.
+- [Pull requests](/ape/shipping/pull-requests.md): From a branch to something reviewable.
+- [Files and history](/ape/the-workspace/files-and-history.md): Seeing what changed, editing it yourself, and going back.
+- [Pointing at things](/ape/the-workspace/pointing-at-things.md): Clicking a thing instead of describing it.
+- [Prompting the agent](/ape/the-workspace/prompting-the-agent.md): What to say, how big asks get planned, and the three things Enter can do.
+- [The live preview](/ape/the-workspace/the-live-preview.md): The real app, running, with a URL bar.
+- [The session screen](/ape/the-workspace/the-session-screen.md): A tour of the two panes, the header, and everything behind Advanced.
+- [Comments and notes](/ape/working-with-others/comments-and-notes.md): Feedback attached to a thing, and messages meant for a person.
+- [Sharing](/ape/working-with-others/sharing.md): Who can see your prototype, and who can change it.
